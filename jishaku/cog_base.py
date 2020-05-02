@@ -471,7 +471,7 @@ class JishakuBase(commands.Cog):  # pylint: disable=too-many-public-methods
         self.retain = False
         return await ctx.send("Variable retention is OFF. Future REPL sessions will dispose their scope when done.")
 
-    @commands.command(name="py", aliases=["python"])
+    @commands.command(name="eval", aliases=["python"])
     async def jsk_python(self, ctx: commands.Context, *, argument: codeblock_converter):
         """
         Direct evaluation of Python code.
